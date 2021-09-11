@@ -11,7 +11,7 @@ const port = 3000; //choosing port 3000 to use from that
 
 const server = http.createServer((req,res)=>{  //callback
 
-    console.log(req.headers);// 
+    console.log(req.headers);// req information
 
     fs.readFile('index.html', (err, data)=>{
         res.writeHead(200,{'Content-Type': 'text/html'});
@@ -27,5 +27,5 @@ const server = http.createServer((req,res)=>{  //callback
 
 
 server.listen(port,hostname,()=>{ //
-    console.log('ServerWorks');
+    console.log('ServerWorks!');
 })
